@@ -1,0 +1,41 @@
+@import '../../../scss/variables.scss';
+
+.delete-button__container{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    &:hover{
+        .delete-button{
+            background: $text-color;
+            transition: .4s all;
+        }
+        .delete-button__img *{
+            fill: $secondary-color;
+            transition: .4s all;
+        }
+        .delete-button__label{
+            color: $secondary-color;
+        }
+    }
+}
+
+.delete-button{
+    width: 6rem;
+    height: 6rem;
+    border: none;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $secondary-color;
+    transition: .4s all;
+    box-shadow: 15px 10px 4px rgba(0, 0, 0, 0.25);
+}
+
+.delete-button__label{
+    font-size: 20px;
+    line-height: 27px;
+    color: $text-color;
+    user-select: none;
+    transition: .4s all;
+}

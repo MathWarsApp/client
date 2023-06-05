@@ -1,0 +1,321 @@
+@import '../../scss/variables.scss';
+
+.fight-page__header{
+    background: $background-color;
+    margin: 0 auto;
+    max-width: 114rem;
+    min-height: 12.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fight-page__body{
+    position: relative;
+    background: $main-color;
+    border-radius: 7.5rem 7.5rem 0rem 0rem;
+    margin: 0 auto;
+    max-width: 114rem;
+    min-height: calc(100vh - 12.4rem);
+    padding: 5rem 5rem 5rem 5rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.fight-page__body-upper{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+}
+
+.fight-page__body-middle{
+    width: 90rem;
+    height: 50rem;
+    border-radius: 3rem;
+    background: $background-color;
+    margin: 0 auto;
+    margin-top: 5rem;
+    padding: 3.5rem;
+    margin-bottom: 6rem;
+}
+.fight-page__body-footer{
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.middle-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.middle-bottom{
+    margin-top: 6rem;
+}
+
+.middle-bottom__winner-container{
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.middle-bottom__winner-title{
+    font-size: 4rem;
+    color: $text-color;
+    text-shadow: 25px 20px 4px rgba(0, 0, 0, 0.25);
+}
+
+.middle-bottom__winner-text{
+    margin-top: 2rem;
+    font-size: 3.5rem;
+    color: $text-color;
+    text-shadow: 25px 20px 4px rgba(0, 0, 0, 0.25);
+}
+
+.fight-page__hp-bar{
+    width: 32rem;
+    height: 4rem;
+    border-radius: 2.5rem;
+    border: 3px solid $secondary-color;
+    font-size: 20px;
+    line-height: 27px;
+    color: $secondary-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 25px 20px 4px rgba(0, 0, 0, 0.25);
+    user-select: none;
+}
+
+.hp-bar__green{
+    background: #34F023;
+}
+
+.hp-bar__yellow{
+    background: #DBEC1A;
+}
+
+.hp-bar__red{
+    background: #B20E0E;
+}
+
+.fight-page__name-wrapper{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    gap: 3rem;
+    flex-direction: row;
+    transition: .4s all;
+    &:hover{
+        .fight-page__name-decoration{
+            background: $text-color;
+            transition: .4s all;
+            .fight-page__name-inner-decoration *{
+                fill: $secondary-color;
+                transition: .4s all;
+            }
+        }
+
+        .fight-page__name{
+            transition: .4s all;
+            color: $secondary-color;
+        }
+    }
+}
+
+.fight-page__name {
+    font-size: 36px;
+    color: #D4ADFC;
+    text-shadow: 25px 20px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-thickness: .1rem;
+    user-select: none;
+    transition: .4s all;
+}
+
+.fight-page__name-decoration{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 100%;
+    background: $secondary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 25px 20px 4px rgba(0, 0, 0, 0.25);
+    transition: .4s all;
+}
+
+.fight-page__hint-container{
+    text-align: left;
+}
+
+.fight-page__hint{
+    font-size: 20px;
+    line-height: 27px;
+    color: $text-color;
+    text-shadow: 25px 20px 4px rgba(0, 0, 0, 0.25);
+    user-select: none;
+}
+
+
+.fight-page__timer-decoration{
+    width: 6rem;
+    height: 6rem;
+    border: none;
+    border-radius: 100%;
+    background: $secondary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 25px 20px 4px rgba(0, 0, 0, 0.25);
+    transition: .4s all;
+    cursor: pointer;
+    &:hover{
+        transition: .4s all;
+        background: $text-color;
+        .fight-page__timer-text{
+            color: $secondary-color;
+        }
+    }
+}
+
+.fight-page__timer-text{
+    font-size: 24px;
+    line-height: 27px;
+    color: $text-color;
+    user-select: none;
+}
+
+.fight-page__form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.fight-page__form-button-wrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.fight-page__form-label{
+    font-size: 48px;
+    line-height: 64px;
+    color: $text-color;
+    user-select: none;
+    margin-bottom: 7rem;
+    text-shadow: 25px 20px 4px rgba(0, 0, 0, 0.25);
+}
+
+.fight-page__form-input{
+    width: 55.6rem;
+    height: 7.4rem;
+    background: $background-color;
+    border: 3px solid $secondary-color;
+    border-radius: 3rem;
+    font-size: 3rem;
+    color: $text-color;
+    padding: 1rem 3rem;
+    outline: none;
+    transition: .4s all;
+    margin-bottom: 5rem;
+    &:hover, &:active, &:focus{
+        border: 3px solid $text-color;
+        background: $main-color;
+        transition: .4s all;
+    }
+}
+
+.fight-page__form-button{
+    width: 15rem;
+    height: 5rem;
+    border: none;
+    border-radius: 1.5rem;
+    background: $secondary-color;
+    color: $text-color;
+    font-size: 20px;
+    line-height: 27px;
+    transition: .4s all;
+    cursor: pointer;
+    box-shadow: 25px 20px 4px rgba(0, 0, 0, 0.25);
+    &:hover{
+        transition: .4s all;
+        background: $text-color;
+        color: $secondary-color;
+    }
+}
+
+.fight-page__button-block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.fight-page__button{
+    width: 8rem;
+    height: 8rem;
+    background: $secondary-color;
+    border: none;
+    border-radius: 1.5rem;
+    transition: .4s all;
+    cursor: pointer;
+    box-shadow: 25px 20px 4px rgba(0, 0, 0, 0.25);
+    &:hover{
+        background: $text-color;
+        transition: .4s all;
+        .fight-page__button-img *{
+            fill: $secondary-color;
+        }
+    }
+}
+
+.fight-page__body-middle-first-text{
+    font-size: 48px;
+    line-height: 64px;
+    color: $secondary-color;
+    margin-bottom: 1.5rem;
+}
+
+.fight-page__body-middle-second-text{
+    font-size: 36px;
+    line-height: 48px;
+    color: $secondary-color;
+}
+
+.fight-page__text-align{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.fight-page__has-armor-block{
+    width: 4rem;
+    height: 4rem;
+    border: none;
+    border-radius: 100%;
+    background: $background-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 25px 20px 4px rgba(0, 0, 0, 0.25);
+    transition: .4s all;
+    text-align: center;
+}
+
+.fight-page__has-armor{
+    font-size: 2rem;
+    color: $text-color;
+}

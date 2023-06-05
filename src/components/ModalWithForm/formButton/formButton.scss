@@ -1,0 +1,33 @@
+@import '../../../scss/variables.scss';
+
+.auth-form__button{
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    width: 150px;
+    height: 40px;
+    background: #5C469C;
+    box-shadow: 25px 15px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+    border-radius: 25px;
+    margin-top: 2.5rem;
+    font-size: 20px;
+    line-height: 27px;
+    transition: .4s all;
+    color: #D4ADFC;
+    cursor: pointer;
+    &:hover{
+        background: $text-color;
+        color: #5C469C;
+        transition: .4s all;
+    }
+    user-select: none;
+}
+
+.auth-form__button-link{
+    text-decoration: none;
+}
+
+.button-text__small{
+    font-size: 1.4rem;
+}

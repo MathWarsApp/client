@@ -1,0 +1,37 @@
+@import '../../../scss/variables.scss';
+
+.modal__auth-form{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    align-items:center;
+}
+
+.auth-form__link-button{
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    line-height: 19px;
+    color: $secondary-color;
+    margin-top: .5em;
+    transition: .4s all;
+    text-decoration: underline;
+    text-decoration-thickness: .1rem;
+    cursor: pointer;
+    &:hover{
+        transition: .4s all;
+        color: $text-color;
+    }
+    user-select: none;
+}
+
+.auth-form__row{
+    display: flex;
+    flex-direction: column;
+}
+
+.error-text{
+    font-size: 1.5rem;
+    color: red;
+}

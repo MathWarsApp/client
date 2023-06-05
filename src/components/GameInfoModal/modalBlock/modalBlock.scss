@@ -1,0 +1,213 @@
+@import '../../../scss/variables.scss';
+
+.game-modal {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+}
+
+.game-modal__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.game-modal__content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 800px;
+    min-height: 600px;
+    margin: 0 auto;
+    background: radial-gradient(50% 50% at 50% 50%, $main-color 0%, $background-color 100%);
+    border-radius: 2.5rem;
+    box-shadow: 25px 20px 4px rgba(0, 0, 0, 0.25);
+}
+
+.game-modal__title {
+    font-size: 36px;
+    color: #D4ADFC;
+    text-shadow: 25px 20px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-thickness: .1rem;
+    user-select: none;
+    transition: .4s all;
+}
+
+.game-modal__header{
+    display: flex;
+    justify-content: center;
+    padding-top: 5rem;
+}
+
+.game-modal__header-decoration{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 100%;
+    background: $secondary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 25px 20px 4px rgba(0, 0, 0, 0.25);
+    transition: .4s all;
+}
+
+.game-modal__header-inner-decoration{
+    width: 3rem;
+    height: 3rem;
+    transition: .4s all;
+}
+
+.game-modal__header-inner-decoration * {
+    fill: $text-color;
+}
+
+.game-modal__close-button{
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    border: none;
+    border-radius: 100%;
+    background: $secondary-color;
+    right: 0;
+    margin: 3rem 3rem 0rem 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 25px 20px 4px rgba(0, 0, 0, 0.25);
+    transition: .4s all;
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+    &:hover{
+        background: $text-color;
+        .game-modal__close-decoration{
+            color: $secondary-color;
+        }
+        transition: .4s all;
+    }
+}
+
+.game-modal__close-decoration{
+    font-size: 4.5rem;
+    color: $text-color;
+    transition: .4s all;
+}
+
+.game-modal__wrapper{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    gap: 3rem;
+    flex-direction: row;
+    transition: .4s all;
+    &:hover{
+        .game-modal__header-decoration{
+            background: $text-color;
+            transition: .4s all;
+            .game-modal__header-inner-decoration *{
+                fill: $secondary-color;
+                transition: .4s all;
+            }
+        }
+
+        .game-modal__title{
+            transition: .4s all;
+            color: $secondary-color;
+        }
+    }
+}
+
+.game-modal__body{
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+.game-modal__player-stats{
+    margin-top: 5rem;
+}
+
+.game-modal__top-players{
+    margin-top: 3.5rem;
+    padding-bottom: 5rem;
+}
+
+.game-modal__top-players-loading{
+    width: 60rem;
+    height: 40rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-modal {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+}
+
+.info-modal__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.info-modal__content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 400px;
+    min-height: 300px;
+    margin: 0 auto;
+    background: radial-gradient(50% 50% at 50% 50%, $main-color 0%, $background-color 100%);
+    border-radius: 2.5rem;
+    box-shadow: 25px 20px 4px rgba(0, 0, 0, 0.25);
+}
+
+.info-modal__close-button{
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    border: none;
+    border-radius: 100%;
+    background: $secondary-color;
+    right: 0;
+    margin: 1.5rem 1.5rem 0rem 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 25px 20px 4px rgba(0, 0, 0, 0.25);
+    transition: .4s all;
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+    &:hover{
+        background: $text-color;
+        .info-modal__close-decoration{
+            color: $secondary-color;
+        }
+        transition: .4s all;
+    }
+}
+
+.info-modal__close-decoration{
+    font-size: 3.5rem;
+    color: $text-color;
+    transition: .4s all;
+}
+

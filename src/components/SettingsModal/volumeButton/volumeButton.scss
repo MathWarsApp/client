@@ -1,0 +1,79 @@
+@import '../../../scss/variables.scss';
+
+.toggle {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 40px;
+  
+    input[type="checkbox"] {
+      display: none;
+    }
+  
+    input[type="checkbox"] + .slider {
+      background-color: #B20E0E;
+      border-radius: 34px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 10px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transition: .4s;
+  
+      &:before {
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 40px;
+        border-radius: 35px;
+        background-color: $secondary-color;
+        top: 0px;
+        left: 0px;
+        transition: .4s;
+      }
+      &:hover::before{
+        background-color: $text-color;
+        }
+    }
+  
+    input[type="checkbox"]:checked + .slider {
+      background-color: #34F023;
+  
+      &:before {
+        transform: translateX(30px);
+      }
+    }
+}
+
+.volume-button__block{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    &:hover{
+        .volume-button__decoration{
+            background: $text-color;
+            transition: .4s all;
+        }
+        .volume-button__decoration-img *{
+            fill: $secondary-color;
+            transition: .4s all;
+        }
+    }
+}
+
+.volume-button__decoration{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 100%;
+    background: $secondary-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .4s all;
+    box-shadow: 15px 10px 4px rgba(0, 0, 0, 0.25);
+}

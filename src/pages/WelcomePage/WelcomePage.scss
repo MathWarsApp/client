@@ -1,0 +1,87 @@
+@import '../../scss/variables.scss';
+
+
+.container{
+    background: radial-gradient(50% 50% at 50% 50%, $main-color 0%, $background-color 100%);
+    max-width: 114rem;
+    min-height: 100vh;
+    font-size: 3rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 50rem;
+    min-height: 50rem;
+    // background: black;
+}
+
+.first-title{
+    font-size: 9.6rem;
+    line-height: 12.8rem;
+    background: linear-gradient(180deg, #D4ADFC 0%, #5C469C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(2.5rem 2rem .4rem rgba(0, 0, 0, 0.25));
+    user-select: none;
+}
+
+.second-title{
+    font-size: 6.4rem;
+    line-height: 8.5rem;
+    background: linear-gradient(180deg, #5C469C 0%, #D4ADFC 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(2.5rem 2rem .4rem rgba(0, 0, 0, 0.25));
+    user-select: none;
+}
+
+.decoration-container{
+    display: flex;
+    flex-direction: row;
+    gap: 9.3rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.deceration-text{
+    font-size: 64px;
+    line-height: 85px;
+    color: $text-color;
+    text-shadow: 25px 20px 4px rgba(0, 0, 0, 0.25);
+    user-select: none;
+}
+
+.button-play{
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+    border: none;
+    border-radius: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $secondary-color;
+    box-shadow: 25px 20px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: .4s all;
+    &:hover{
+        background: $text-color;
+        transition: .4s all;
+        .play-button * {
+            fill: $secondary-color;
+        }
+    }
+}
+
+.play-button{
+    position: absolute;
+    left: 4rem;
+}
